@@ -4,3 +4,17 @@
 *.log
 .env
 
+
+# local dev artifacts
+.local-dev/
+*.db
+*.log
+
+# Go build
+/bin/
+/dist/
+
+# Node/Angular
+node_modules/
+dist/
+.angular/
