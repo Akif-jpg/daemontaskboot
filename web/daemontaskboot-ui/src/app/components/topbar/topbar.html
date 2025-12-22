@@ -1,0 +1,22 @@
+<nav class="topbar">
+  <div class="logo">
+    <strong>{{ langService.translate('DASHBOARD_TITLE') }}</strong>
+  </div>
+
+  <div class="actions">
+    <div class="lang-switcher">
+      <button
+        (click)="changeLanguage('en')"
+        [class.active]="(langService.currentLang$ | async) === 'en'"
+      >
+        EN
+      </button>
+      <button
+        (click)="changeLanguage('tr')"
+        [class.active]="(langService.currentLang$ | async) === 'tr'"
+      >
+        TR
+      </button>
+    </div>
+  </div>
+</nav>

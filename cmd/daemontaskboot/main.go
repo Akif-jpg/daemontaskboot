@@ -1,22 +1,14 @@
 package main
 
-import (
-    "database/sql"
-    "log"
+import "log"
 
-    _ "github.com/mattn/go-sqlite3"
+var (
+	version = "dev"
+	commit  = "none"
+	date    = "unknown"
 )
 
 func main() {
-    db, err := sql.Open("sqlite3", "file:daemontaskboot.db?_foreign_keys=on")
-    if err != nil { log.Fatal(err) }
-    defer db.Close()
-
-    _, err = db.Exec(`CREATE TABLE IF NOT EXISTS tasks (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT NOT NULL
-    );`)
-    if err != nil { log.Fatal(err) }
-
-    log.Println("ok")
+	log.Printf("daemontaskboot %s (%s) %s", version, commit, date)
+	log.Println("ok")
 }
