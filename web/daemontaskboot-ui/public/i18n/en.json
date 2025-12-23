@@ -1,5 +1,26 @@
 {
-  "DASHBOARD_TITLE": "Daemon Task Boot",
-  "STATUS_RUNNING": "Running",
-  "ADD_TASK": "Add New Task"
+  "DASHBOARD_TITLE": "Dashboard",
+  "APP_NAME": "daemontaskboot",
+  "CHANGE_LANGUAGE": "Change Language",
+  "WELCOME_MESSAGE": "Linux-first Task Scheduler & Automation",
+  "TASKS": "Tasks",
+  "WATCHERS": "Watchers",
+  "HISTORY": "History",
+  "SETTINGS": "Settings",
+  "NOTIFICATIONS": "Notifications",
+  "SYSTEM_MONITORING": "System Monitoring",
+  "EVENT_LOGS": "Event Logs",
+  "SCHEDULED_TASKS": "Scheduled Tasks",
+  "ACTIVE_WATCHERS": "Active Watchers",
+
+  "FOOTER_DESCRIPTION": "Linux-first task scheduler + event-driven automation + system monitoring",
+  "FOOTER_RESOURCES": "Resources",
+  "FOOTER_FEATURES": "Features",
+  "FOOTER_SCHEDULER": "Task Scheduler",
+  "FOOTER_WATCHERS": "System Watchers",
+  "FOOTER_HISTORY": "Execution History",
+  "FOOTER_COPYRIGHT": "daemontaskboot",
+  "TOGGLE_THEME": "Toggle Theme",
+  "GITHUB_REPO": "GitHub Repository",
+  "VERSION": "Version"
 }

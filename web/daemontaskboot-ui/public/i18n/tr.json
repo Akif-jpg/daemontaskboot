@@ -1,5 +1,26 @@
 {
-  "DASHBOARD_TITLE": "Sistem Görev Yöneticisi",
-  "STATUS_RUNNING": "Çalışıyor",
-  "ADD_TASK": "Yeni Görev Ekle"
+  "DASHBOARD_TITLE": "Kontrol Paneli",
+  "APP_NAME": "daemontaskboot",
+  "CHANGE_LANGUAGE": "Dil Değiştir",
+  "WELCOME_MESSAGE": "Linux Tabanlı Görev Zamanlayıcı ve Otomasyon",
+  "TASKS": "Görevler",
+  "WATCHERS": "İzleyiciler",
+  "HISTORY": "Geçmiş",
+  "SETTINGS": "Ayarlar",
+  "NOTIFICATIONS": "Bildirimler",
+  "SYSTEM_MONITORING": "Sistem İzleme",
+  "EVENT_LOGS": "Olay Günlükleri",
+  "SCHEDULED_TASKS": "Zamanlanmış Görevler",
+  "ACTIVE_WATCHERS": "Aktif İzleyiciler",
+
+  "FOOTER_DESCRIPTION": "Linux öncelikli görev planlayıcı + olay tabanlı otomasyon + sistem izleme",
+  "FOOTER_RESOURCES": "Kaynaklar",
+  "FOOTER_FEATURES": "Özellikler",
+  "FOOTER_SCHEDULER": "Görev Planlayıcı",
+  "FOOTER_WATCHERS": "Sistem İzleyicileri",
+  "FOOTER_HISTORY": "Çalıştırma Geçmişi",
+  "FOOTER_COPYRIGHT": "daemontaskboot",
+  "TOGGLE_THEME": "Temayı Değiştir",
+  "GITHUB_REPO": "GitHub Deposu",
+  "VERSION": "Sürüm"
 }

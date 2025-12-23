@@ -1,22 +1,60 @@
-<nav class="topbar">
-  <div class="logo">
-    <strong>{{ langService.translate('DASHBOARD_TITLE') }}</strong>
-  </div>
+<mat-toolbar class="topbar">
+  <div class="topbar-container">
+    <!-- Logo ve Proje Adı -->
+    <div class="logo-section">
+      <img
+        src="/images/deamontaskbooticon.png"
+        alt="daemontaskboot Logo"
+        class="logo-icon"
+        loading="eager"
+      />
+      <span class="logo-text">
+        <strong>{{ langService.translate('APP_NAME') || 'daemontaskboot' }}</strong>
+      </span>
+    </div>
 
-  <div class="actions">
-    <div class="lang-switcher">
+    <!-- Spacer -->
+    <span class="spacer"></span>
+
+    <!-- Sağ taraf aksiyonlar -->
+    <div class="actions">
+      <!-- Dil Seçici -->
       <button
-        (click)="changeLanguage('en')"
-        [class.active]="(langService.currentLang$ | async) === 'en'"
+        mat-icon-button
+        [matMenuTriggerFor]="langMenu"
+        [matTooltip]="langService.translate('CHANGE_LANGUAGE') || 'Change Language'"
+        class="lang-button"
       >
-        EN
+        <mat-icon>language</mat-icon>
       </button>
+
+      <mat-menu #langMenu="matMenu" class="lang-menu">
+        <button
+          mat-menu-item
+          (click)="changeLanguage('en')"
+          [class.active-lang]="(langService.currentLang$ | async) === 'en'"
+        >
+          <mat-icon>{{ (langService.currentLang$ | async) === 'en' ? 'check' : '' }}</mat-icon>
+          <span>English</span>
+        </button>
+        <button
+          mat-menu-item
+          (click)="changeLanguage('tr')"
+          [class.active-lang]="(langService.currentLang$ | async) === 'tr'"
+        >
+          <mat-icon>{{ (langService.currentLang$ | async) === 'tr' ? 'check' : '' }}</mat-icon>
+          <span>Türkçe</span>
+        </button>
+      </mat-menu>
+
+      <!-- Dashboard Button (optional) -->
       <button
-        (click)="changeLanguage('tr')"
-        [class.active]="(langService.currentLang$ | async) === 'tr'"
+        mat-icon-button
+        [matTooltip]="langService.translate('DASHBOARD_TITLE') || 'Dashboard'"
+        class="dashboard-button"
       >
-        TR
+        <mat-icon>dashboard</mat-icon>
       </button>
     </div>
   </div>
-</nav>
+</mat-toolbar>

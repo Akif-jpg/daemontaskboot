@@ -1,0 +1,80 @@
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Main Footer Content -->
+    <div class="footer-main">
+      <!-- Project Info -->
+      <div class="project-info">
+        <div class="project-logo">
+          <img
+            class="project-icon"
+            src="/images/deamontaskbooticon.png"
+            alt="DaemonTaskBoot icon"
+            width="32"
+            height="32"
+          />
+          <span class="project-name">{{ langService.translate('APP_NAME') }}</span>
+        </div>
+        <p class="project-description">{{ langService.translate('FOOTER_DESCRIPTION') }}</p>
+      </div>
+
+      <!-- Links Section -->
+      <div class="footer-links">
+        <div class="links-group">
+          <h4>{{ langService.translate('FOOTER_RESOURCES') }}</h4>
+          <ul>
+            <li>
+              <a href="https://github.com/Akif-jpg/daemontaskboot" target="_blank" rel="noopener"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/Akif-jpg/daemontaskboot/blob/main/README.md"
+                target="_blank"
+                rel="noopener"
+                >{{ langService.translate('DOCUMENTATION') || 'Documentation' }}</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="links-group">
+          <h4>{{ langService.translate('FOOTER_FEATURES') }}</h4>
+          <ul>
+            <li><a href="/scheduler">{{ langService.translate('FOOTER_SCHEDULER') }}</a></li>
+            <li><a href="/watchers">{{ langService.translate('FOOTER_WATCHERS') }}</a></li>
+            <li><a href="/history">{{ langService.translate('FOOTER_HISTORY') }}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <mat-divider class="footer-divider"></mat-divider>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="copyright">
+        &copy; {{ currentYear }} {{ langService.translate('FOOTER_COPYRIGHT') }}
+      </div>
+
+      <div class="footer-actions">
+        <!-- GitHub Link -->
+        <a
+          mat-icon-button
+          href="https://github.com/Akif-jpg/daemontaskboot"
+          target="_blank"
+          rel="noopener"
+          [matTooltip]="langService.translate('GITHUB_REPO')"
+          aria-label="GitHub Repository"
+          class="github-link"
+        >
+          <mat-icon>code</mat-icon>
+        </a>
+
+        <!-- Version -->
+        <span class="version-badge"> {{ langService.translate('VERSION') }} 0.1.0 </span>
+      </div>
+    </div>
+  </div>
+</footer>
