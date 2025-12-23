@@ -16,9 +16,9 @@
 .main-content {
   flex: 1;
   margin-left: 280px; // Default sidebar width
+  padding-top: 64px; // Topbar height for fixed positioning
   transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   min-height: calc(100vh - 64px - 80px); // Adjust for topbar and footer
-  padding: 0;
   overflow-x: hidden;
 
   &.sidebar-collapsed {
@@ -32,6 +32,7 @@
   // Mobile adjustments
   @media (max-width: 768px) {
     margin-left: 0;
+    padding-top: 56px; // Mobile topbar height
     min-height: calc(100vh - 56px - 80px); // Mobile topbar height
 
     &.sidebar-collapsed,
