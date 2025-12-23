@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './footer';
 import { LanguageService } from '../../services/language';
 import { of } from 'rxjs';
+import { provideRouter } from '@angular/router';
 
 describe('FooterComponent', () => {
   let component: FooterComponent;
@@ -19,7 +20,7 @@ describe('FooterComponent', () => {
 
     await TestBed.configureTestingModule({
       imports: [FooterComponent, BrowserAnimationsModule],
-      providers: [{ provide: LanguageService, useValue: mockLanguageService }],
+      providers: [{ provide: LanguageService, useValue: mockLanguageService }, provideRouter([])],
     }).compileComponents();
 
     fixture = TestBed.createComponent(FooterComponent);

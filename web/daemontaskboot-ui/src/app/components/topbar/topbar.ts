@@ -1,17 +1,20 @@
 import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { LanguageService } from '../../services/language';
+import { ROUTES, getRoute } from '../../shared/constants/routes';
 
 @Component({
   selector: 'app-topbar',
   standalone: true,
   imports: [
     CommonModule,
+    RouterModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
@@ -23,6 +26,9 @@ import { LanguageService } from '../../services/language';
 })
 export class TopbarComponent implements OnInit {
   private isBrowser: boolean;
+
+  // Expose route constants to template
+  ROUTES = ROUTES;
 
   constructor(
     public langService: LanguageService,
@@ -61,6 +67,13 @@ export class TopbarComponent implements OnInit {
     if (this.isBrowser) {
       this.setLocalStorage('preferred-language', lang);
     }
+  }
+
+  /**
+   * Get route with leading slash - expose helper function to template
+   */
+  getRoute(route: string): string {
+    return getRoute(route);
   }
 
   // localStorage helper methods

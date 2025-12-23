@@ -1,0 +1,278 @@
+<div class="documentation-container">
+  <!-- Header Section -->
+  <div class="documentation-header">
+    <mat-card class="header-card">
+      <mat-card-content>
+        <div class="header-content">
+          <mat-icon class="header-icon">description</mat-icon>
+          <div class="header-text">
+            <h1>{{ languageService.translate('DOCUMENTATION_TITLE') || 'Documentation' }}</h1>
+            <p class="subtitle">
+              {{ languageService.translate('DOCUMENTATION_SUBTITLE') || 'Complete guide for
+              daemontaskboot' }}
+            </p>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Navigation Tabs -->
+  <mat-card class="nav-card">
+    <mat-tab-group mat-stretch-tabs="false" class="documentation-tabs">
+      <mat-tab label="{{ languageService.translate('GETTING_STARTED') || 'Getting Started' }}">
+        <div class="tab-content">
+          <h2>{{ languageService.translate('GETTING_STARTED') || 'Getting Started' }}</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+
+          <mat-card class="info-card">
+            <mat-card-header>
+              <mat-icon mat-card-avatar>rocket_launch</mat-icon>
+              <mat-card-title
+                >{{ languageService.translate('QUICK_START') || 'Quick Start' }}</mat-card-title
+              >
+            </mat-card-header>
+            <mat-card-content>
+              <p>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt mollit anim id est laborum.
+              </p>
+              <mat-list>
+                <mat-list-item>
+                  <mat-icon matListItemIcon>check_circle</mat-icon>
+                  <div matListItemTitle>Lorem ipsum dolor sit amet</div>
+                </mat-list-item>
+                <mat-list-item>
+                  <mat-icon matListItemIcon>check_circle</mat-icon>
+                  <div matListItemTitle>Consectetur adipiscing elit</div>
+                </mat-list-item>
+                <mat-list-item>
+                  <mat-icon matListItemIcon>check_circle</mat-icon>
+                  <div matListItemTitle>Sed do eiusmod tempor incididunt</div>
+                </mat-list-item>
+              </mat-list>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="{{ languageService.translate('INSTALLATION') || 'Installation' }}">
+        <div class="tab-content">
+          <h2>{{ languageService.translate('INSTALLATION') || 'Installation' }}</h2>
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+            architecto beatae vitae dicta sunt explicabo.
+          </p>
+
+          <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <mat-icon>download</mat-icon>
+                  {{ languageService.translate('SYSTEM_REQUIREMENTS') || 'System Requirements' }}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+              </p>
+              <mat-chip-set>
+                <mat-chip>Linux Ubuntu 20.04+</mat-chip>
+                <mat-chip>Node.js 18+</mat-chip>
+                <mat-chip>Angular 17+</mat-chip>
+                <mat-chip>Docker (Optional)</mat-chip>
+              </mat-chip-set>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <mat-icon>terminal</mat-icon>
+                  {{ languageService.translate('INSTALLATION_STEPS') || 'Installation Steps' }}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <p>
+                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
+                magnam aliquam quaerat voluptatem.
+              </p>
+              <pre><code>npm install -g daemontaskboot
+systemctl enable daemontaskboot
+systemctl start daemontaskboot</code></pre>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="{{ languageService.translate('API_REFERENCE') || 'API Reference' }}">
+        <div class="tab-content">
+          <h2>{{ languageService.translate('API_REFERENCE') || 'API Reference' }}</h2>
+          <p>
+            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+            laboriosam, nisi ut aliquid ex ea commodi consequatur.
+          </p>
+
+          <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <mat-icon>api</mat-icon>
+                  {{ languageService.translate('TASK_SCHEDULER_API') || 'Task Scheduler API' }}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <p>
+                Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+                molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
+              </p>
+
+              <mat-card class="api-card">
+                <mat-card-header>
+                  <mat-card-title>POST /api/tasks</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                    praesentium voluptatum deleniti atque corrupti quos dolores.
+                  </p>
+                  <pre><code>{{'{'}}"name": "Lorem Task","schedule": "0 0 * * *","command": "echo 'Lorem ipsum'"{{'}'}}</code></pre>
+                </mat-card-content>
+              </mat-card>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <mat-icon>visibility</mat-icon>
+                  {{ languageService.translate('WATCHERS_API') || 'Watchers API' }}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <p>
+                Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
+                soluta nobis est eligendi optio cumque nihil impedit quo minus.
+              </p>
+
+              <mat-table [dataSource]="apiEndpoints" class="api-table">
+                <ng-container matColumnDef="method">
+                  <mat-header-cell *matHeaderCellDef>Method</mat-header-cell>
+                  <mat-cell *matCellDef="let element">
+                    <mat-chip [color]="getMethodColor(element.method)"
+                      >{{ element.method }}</mat-chip
+                    >
+                  </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="endpoint">
+                  <mat-header-cell *matHeaderCellDef>Endpoint</mat-header-cell>
+                  <mat-cell *matCellDef="let element">{{ element.endpoint }}</mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="description">
+                  <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
+                  <mat-cell *matCellDef="let element">{{ element.description }}</mat-cell>
+                </ng-container>
+
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+              </mat-table>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="{{ languageService.translate('EXAMPLES') || 'Examples' }}">
+        <div class="tab-content">
+          <h2>{{ languageService.translate('EXAMPLES') || 'Examples' }}</h2>
+          <p>
+            Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
+            eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+          </p>
+
+          <div class="examples-grid">
+            <mat-card class="example-card">
+              <mat-card-header>
+                <mat-icon mat-card-avatar>schedule</mat-icon>
+                <mat-card-title
+                  >{{ languageService.translate('SCHEDULED_BACKUP') || 'Scheduled Backup'
+                  }}</mat-card-title
+                >
+                <mat-card-subtitle>Lorem ipsum example</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-content>
+                <p>
+                  Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus
+                  maiores alias consequatur aut perferendis doloribus asperiores repellat.
+                </p>
+                <pre><code>#!/bin/bash
+# Lorem ipsum backup script
+tar -czf backup-$(date +%Y%m%d).tar.gz /home/user/documents</code></pre>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button color="primary">
+                  <mat-icon>content_copy</mat-icon>
+                  {{ languageService.translate('COPY_CODE') || 'Copy Code' }}
+                </button>
+              </mat-card-actions>
+            </mat-card>
+
+            <mat-card class="example-card">
+              <mat-card-header>
+                <mat-icon mat-card-avatar>monitor</mat-icon>
+                <mat-card-title
+                  >{{ languageService.translate('SYSTEM_WATCHER') || 'System Watcher'
+                  }}</mat-card-title
+                >
+                <mat-card-subtitle>Dolor sit amet example</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-content>
+                <p>
+                  Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
+                  minus id quod maxime placeat facere possimus.
+                </p>
+                <pre><code># Watcher configuration
+{{'{'}}"path": "/var/log/","pattern": "*.log","action": "notify-admin"{{'}'}}</code></pre>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button color="primary">
+                  <mat-icon>content_copy</mat-icon>
+                  {{ languageService.translate('COPY_CODE') || 'Copy Code' }}
+                </button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card>
+
+  <!-- Footer Section -->
+  <mat-card class="footer-card">
+    <mat-card-content>
+      <div class="footer-content">
+        <mat-icon>help_outline</mat-icon>
+        <div class="footer-text">
+          <h3>{{ languageService.translate('NEED_HELP') || 'Need Help?' }}</h3>
+          <p>
+            Omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut
+            officiis debitis aut rerum necessitatibus saepe eveniet.
+          </p>
+        </div>
+        <div class="footer-actions">
+          <button mat-raised-button color="primary">
+            <mat-icon>support</mat-icon>
+            {{ languageService.translate('CONTACT_SUPPORT') || 'Contact Support' }}
+          </button>
+          <button mat-stroked-button color="primary">
+            <mat-icon>code</mat-icon>
+            {{ languageService.translate('VIEW_SOURCE') || 'View Source' }}
+          </button>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -4,7 +4,8 @@ import { TopbarComponent } from './topbar';
 import { LanguageService } from '../../services/language';
 import { PLATFORM_ID } from '@angular/core';
 import { of } from 'rxjs';
-import { vi } from 'vitest'; // <-- ekle
+import { vi } from 'vitest';
+import { provideRouter } from '@angular/router';
 
 describe('TopbarComponent', () => {
   let component: TopbarComponent;
@@ -14,7 +15,7 @@ describe('TopbarComponent', () => {
   beforeEach(async () => {
     mockLanguageService = {
       currentLang$: of('en'),
-      setLanguage: vi.fn(), // <-- jasmine.createSpy yerine
+      setLanguage: vi.fn(),
       translate: (key: string) => key,
     };
 
@@ -23,6 +24,7 @@ describe('TopbarComponent', () => {
       providers: [
         { provide: LanguageService, useValue: mockLanguageService },
         { provide: PLATFORM_ID, useValue: 'browser' },
+        provideRouter([]),
       ],
     }).compileComponents();
 

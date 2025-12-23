@@ -22,5 +22,23 @@
   "FOOTER_COPYRIGHT": "daemontaskboot",
   "TOGGLE_THEME": "Temayı Değiştir",
   "GITHUB_REPO": "GitHub Deposu",
-  "VERSION": "Sürüm"
+  "VERSION": "Sürüm",
+
+  "DOCUMENTATION_TITLE": "Dokümantasyon",
+  "DOCUMENTATION_SUBTITLE": "daemontaskboot için kapsamlı kılavuz",
+  "GETTING_STARTED": "Başlarken",
+  "INSTALLATION": "Kurulum",
+  "API_REFERENCE": "API Referansı",
+  "EXAMPLES": "Örnekler",
+  "QUICK_START": "Hızlı Başlangıç",
+  "SYSTEM_REQUIREMENTS": "Sistem Gereksinimleri",
+  "INSTALLATION_STEPS": "Kurulum Adımları",
+  "TASK_SCHEDULER_API": "Görev Zamanlayıcı API",
+  "WATCHERS_API": "İzleyiciler API",
+  "SCHEDULED_BACKUP": "Zamanlanmış Yedekleme",
+  "SYSTEM_WATCHER": "Sistem İzleyicisi",
+  "COPY_CODE": "Kodu Kopyala",
+  "NEED_HELP": "Yardıma İhtiyacınız Var?",
+  "CONTACT_SUPPORT": "Destek İle İletişim",
+  "VIEW_SOURCE": "Kaynak Kodu Görüntüle"
 }

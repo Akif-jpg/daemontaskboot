@@ -23,17 +23,12 @@
           <h4>{{ langService.translate('FOOTER_RESOURCES') }}</h4>
           <ul>
             <li>
-              <a href="https://github.com/Akif-jpg/daemontaskboot" target="_blank" rel="noopener"
-                >GitHub</a
-              >
+              <a [href]="EXTERNAL_ROUTES.GITHUB_REPO" target="_blank" rel="noopener">GitHub</a>
             </li>
             <li>
-              <a
-                href="https://github.com/Akif-jpg/daemontaskboot/blob/main/README.md"
-                target="_blank"
-                rel="noopener"
-                >{{ langService.translate('DOCUMENTATION') || 'Documentation' }}</a
-              >
+              <a [routerLink]="getRoute(ROUTES.DOCUMENTATION)">
+                {{ langService.translate('DOCUMENTATION_TITLE') || 'Documentation' }}
+              </a>
             </li>
           </ul>
         </div>
@@ -41,9 +36,21 @@
         <div class="links-group">
           <h4>{{ langService.translate('FOOTER_FEATURES') }}</h4>
           <ul>
-            <li><a href="/scheduler">{{ langService.translate('FOOTER_SCHEDULER') }}</a></li>
-            <li><a href="/watchers">{{ langService.translate('FOOTER_WATCHERS') }}</a></li>
-            <li><a href="/history">{{ langService.translate('FOOTER_HISTORY') }}</a></li>
+            <li>
+              <a [routerLink]="getRoute(ROUTES.TASKS)">
+                {{ langService.translate('FOOTER_SCHEDULER') }}
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="getRoute(ROUTES.WATCHERS)">
+                {{ langService.translate('FOOTER_WATCHERS') }}
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="getRoute(ROUTES.HISTORY)">
+                {{ langService.translate('FOOTER_HISTORY') }}
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -62,7 +69,7 @@
         <!-- GitHub Link -->
         <a
           mat-icon-button
-          href="https://github.com/Akif-jpg/daemontaskboot"
+          [href]="EXTERNAL_ROUTES.GITHUB_REPO"
           target="_blank"
           rel="noopener"
           [matTooltip]="langService.translate('GITHUB_REPO')"

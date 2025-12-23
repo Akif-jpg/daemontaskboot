@@ -22,5 +22,23 @@
   "FOOTER_COPYRIGHT": "daemontaskboot",
   "TOGGLE_THEME": "Toggle Theme",
   "GITHUB_REPO": "GitHub Repository",
-  "VERSION": "Version"
+  "VERSION": "Version",
+
+  "DOCUMENTATION_TITLE": "Documentation",
+  "DOCUMENTATION_SUBTITLE": "Complete guide for daemontaskboot",
+  "GETTING_STARTED": "Getting Started",
+  "INSTALLATION": "Installation",
+  "API_REFERENCE": "API Reference",
+  "EXAMPLES": "Examples",
+  "QUICK_START": "Quick Start",
+  "SYSTEM_REQUIREMENTS": "System Requirements",
+  "INSTALLATION_STEPS": "Installation Steps",
+  "TASK_SCHEDULER_API": "Task Scheduler API",
+  "WATCHERS_API": "Watchers API",
+  "SCHEDULED_BACKUP": "Scheduled Backup",
+  "SYSTEM_WATCHER": "System Watcher",
+  "COPY_CODE": "Copy Code",
+  "NEED_HELP": "Need Help?",
+  "CONTACT_SUPPORT": "Contact Support",
+  "VIEW_SOURCE": "View Source"
 }

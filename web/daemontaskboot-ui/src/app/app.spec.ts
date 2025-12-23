@@ -3,11 +3,13 @@ import { App } from './app';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TopbarComponent } from './components/topbar/topbar';
 import { RouterOutlet } from '@angular/router';
+import { provideRouter } from '@angular/router';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [App, HttpClientTestingModule, TopbarComponent, RouterOutlet],
+      providers: [provideRouter([])],
     }).compileComponents();
   });
 

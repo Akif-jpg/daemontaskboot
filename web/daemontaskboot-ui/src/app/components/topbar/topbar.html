@@ -1,7 +1,7 @@
 <mat-toolbar class="topbar">
   <div class="topbar-container">
     <!-- Logo ve Proje Adı -->
-    <div class="logo-section">
+    <div class="logo-section" [routerLink]="getRoute(ROUTES.DASHBOARD)" style="cursor: pointer">
       <img
         src="/images/deamontaskbooticon.png"
         alt="daemontaskboot Logo"
@@ -47,13 +47,24 @@
         </button>
       </mat-menu>
 
-      <!-- Dashboard Button (optional) -->
+      <!-- Dashboard Button -->
       <button
         mat-icon-button
+        [routerLink]="getRoute(ROUTES.DASHBOARD)"
         [matTooltip]="langService.translate('DASHBOARD_TITLE') || 'Dashboard'"
         class="dashboard-button"
       >
         <mat-icon>dashboard</mat-icon>
+      </button>
+
+      <!-- Documentation Button -->
+      <button
+        mat-icon-button
+        [routerLink]="getRoute(ROUTES.DOCUMENTATION)"
+        [matTooltip]="langService.translate('DOCUMENTATION_TITLE') || 'Documentation'"
+        class="documentation-button"
+      >
+        <mat-icon>description</mat-icon>
       </button>
     </div>
   </div>

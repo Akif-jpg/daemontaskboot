@@ -1,0 +1,130 @@
+// App Layout Styles for Sidebar Integration
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.main-layout {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 280px; // Default sidebar width
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: calc(100vh - 64px - 80px); // Adjust for topbar and footer
+  padding: 0;
+  overflow-x: hidden;
+
+  &.sidebar-collapsed {
+    margin-left: 72px; // Collapsed sidebar width
+  }
+
+  &.sidebar-expanded {
+    margin-left: 280px; // Expanded sidebar width
+  }
+
+  // Mobile adjustments
+  @media (max-width: 768px) {
+    margin-left: 0;
+    min-height: calc(100vh - 56px - 80px); // Mobile topbar height
+
+    &.sidebar-collapsed,
+    &.sidebar-expanded {
+      margin-left: 0;
+    }
+  }
+}
+
+.app-footer {
+  margin-left: 280px; // Default sidebar width
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.sidebar-collapsed {
+    margin-left: 72px; // Collapsed sidebar width
+  }
+
+  &.sidebar-expanded {
+    margin-left: 280px; // Expanded sidebar width
+  }
+
+  // Mobile adjustments
+  @media (max-width: 768px) {
+    margin-left: 0;
+
+    &.sidebar-collapsed,
+    &.sidebar-expanded {
+      margin-left: 0;
+    }
+  }
+}
+
+// Smooth transitions for all layout changes
+* {
+  box-sizing: border-box;
+}
+
+// Prevent horizontal scroll
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+// Mobile sidebar overlay
+@media (max-width: 768px) {
+  .main-layout {
+    position: relative;
+  }
+
+  // Sidebar overlay background
+  .sidebar-overlay {
+    position: fixed;
+    top: 56px; // Mobile topbar height
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+// Accessibility improvements
+@media (prefers-reduced-motion: reduce) {
+  .main-content,
+  .app-footer {
+    transition: none;
+  }
+}
+
+// High contrast mode
+@media (prefers-contrast: high) {
+  .main-content {
+    border-left: 2px solid currentColor;
+  }
+}
+
+// Print styles
+@media print {
+  .main-content {
+    margin-left: 0 !important;
+  }
+
+  .app-footer {
+    margin-left: 0 !important;
+  }
+}
