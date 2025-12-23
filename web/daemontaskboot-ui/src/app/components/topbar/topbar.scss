@@ -1,4 +1,4 @@
-// Rose/Red teması için custom renkler
+// Custom colors for Rose/Red theme
 $primary-color: #e91e63; // Rose/Pink
 $accent-color: #f44336; // Red
 $bg-gradient-start: #c2185b;
@@ -163,7 +163,7 @@ $bg-gradient-end: #d32f2f;
   }
 }
 
-// Responsive tasarım
+// Responsive design
 @media (max-width: 480px) {
   .topbar {
     padding: 0 12px;
@@ -188,7 +188,7 @@ $bg-gradient-end: #d32f2f;
   }
 }
 
-// Dark mode desteği (isteğe bağlı)
+// Dark mode support (optional)
 @media (prefers-color-scheme: dark) {
   .topbar {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
@@ -207,7 +207,7 @@ button:focus-visible {
   will-change: transform;
 }
 
-// Print için topbar'ı gizle
+// Hide topbar for print
 @media print {
   .topbar {
     display: none;

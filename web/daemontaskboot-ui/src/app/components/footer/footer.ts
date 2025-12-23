@@ -19,11 +19,11 @@ export class FooterComponent implements OnInit {
   constructor(public langService: LanguageService) {}
 
   ngOnInit(): void {
-    // İhtiyaç duyulursa başlangıç kodu
+    // Initialization code if needed
   }
 
-  // Tema değiştirme için metod (tema servisi eklendiğinde implementasyon yapılacak)
+  // Method for theme changing (implementation will be done when theme service is added)
   toggleTheme(): void {
-    console.log('Tema değiştirme tıklandı');
+    console.log('Theme toggle clicked');
   }
 }

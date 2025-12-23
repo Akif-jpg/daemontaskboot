@@ -32,7 +32,7 @@ export class TopbarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Sadece browser ortamında çalıştır
+    // Only run in browser environment
     if (this.isBrowser) {
       this.initializeLanguage();
     }
@@ -44,10 +44,10 @@ export class TopbarComponent implements OnInit {
     const savedLang = this.getLocalStorage('preferred-language');
 
     if (!savedLang) {
-      // Kullanıcının browser dil tercihini al
+      // Get user's browser language preference
       const browserLang = navigator.language.split('-')[0]; // 'en-US' -> 'en'
 
-      // Desteklenen diller arasında varsa kullan, yoksa varsayılan olarak 'en'
+      // Use if among supported languages, otherwise default to 'en'
       const supportedLangs = ['en', 'tr'];
       const langToUse = supportedLangs.includes(browserLang) ? browserLang : 'en';
 
@@ -57,13 +57,13 @@ export class TopbarComponent implements OnInit {
 
   changeLanguage(lang: string): void {
     this.langService.setLanguage(lang);
-    // Kullanıcı tercihini kaydet (sadece browser'da)
+    // Save user preference (only in browser)
     if (this.isBrowser) {
       this.setLocalStorage('preferred-language', lang);
     }
   }
 
-  // localStorage helper metodları
+  // localStorage helper methods
   private getLocalStorage(key: string): string | null {
     if (!this.isBrowser) return null;
     try {

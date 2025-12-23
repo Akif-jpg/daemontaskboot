@@ -1,4 +1,4 @@
-// Rose/Red teması için custom renkler (topbar ile uyumlu)
+// Custom colors for Rose/Red theme (compatible with topbar)
 $primary-color: #e91e63; // Rose/Pink
 $accent-color: #f44336; // Red
 $bg-gradient-start: #c2185b;
@@ -14,7 +14,7 @@ $footer-divider-color: rgba(255, 255, 255, 0.12);
   padding: 40px 24px 24px;
   position: relative;
 
-  // Üstte gradient aksan
+  // Gradient accent at top
   &::before {
     content: '';
     position: absolute;
@@ -203,21 +203,21 @@ $footer-divider-color: rgba(255, 255, 255, 0.12);
   }
 }
 
-// Karanlık mod geliştirmeleri
+// Dark mode improvements
 @media (prefers-color-scheme: dark) {
   .footer {
     background-color: #121212;
   }
 }
 
-// Baskı stilleri
+// Print styles
 @media print {
   .footer {
     display: none;
   }
 }
 
-// Erişilebilirlik
+// Accessibility
 a:focus-visible,
 button:focus-visible {
   outline: 2px solid $primary-color;
