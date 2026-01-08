@@ -23,7 +23,7 @@ func (wr *WatchersRoute) SetName(name string) {
 
 // NewWatchersRoute creates a new watchers route handler
 func NewWatchersRoute() *WatchersRoute {
-	return &WatchersRoute{}
+	return &WatchersRoute{name: "watchers"}
 }
 
 // RegisterRoutes registers all watcher-related HTTP endpoints

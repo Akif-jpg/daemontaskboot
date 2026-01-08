@@ -23,7 +23,7 @@ func (sr *SchedulesRoute) SetName(name string) {
 
 // NewSchedulesRoute creates a new schedules route handler
 func NewSchedulesRoute() *SchedulesRoute {
-	return &SchedulesRoute{}
+	return &SchedulesRoute{name: "schedules"}
 }
 
 // RegisterRoutes registers all schedule-related HTTP endpoints

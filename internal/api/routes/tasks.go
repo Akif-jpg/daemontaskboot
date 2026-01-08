@@ -23,7 +23,7 @@ func (tr *TasksRoute) SetName(name string) {
 
 // NewTasksRoute creates a new tasks route handler
 func NewTasksRoute() *TasksRoute {
-	return &TasksRoute{}
+	return &TasksRoute{name: "tasks"}
 }
 
 // RegisterRoutes registers all task-related HTTP endpoints

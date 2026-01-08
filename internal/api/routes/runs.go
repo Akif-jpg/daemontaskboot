@@ -13,7 +13,7 @@ type RunsRoute struct {
 
 // NewRunsRoute creates a new runs route handler
 func NewRunsRoute() *RunsRoute {
-	return &RunsRoute{}
+	return &RunsRoute{name: "runs"}
 }
 
 func (rr *RunsRoute) GetName() string {

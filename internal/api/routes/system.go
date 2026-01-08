@@ -23,7 +23,7 @@ func (sr *SystemRoute) SetName(name string) {
 
 // NewSystemRoute creates a new system route handler
 func NewSystemRoute() *SystemRoute {
-	return &SystemRoute{}
+	return &SystemRoute{name: "system"}
 }
 
 // RegisterRoutes registers all system-related HTTP endpoints
